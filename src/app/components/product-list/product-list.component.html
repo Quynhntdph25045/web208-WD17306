@@ -1,0 +1,21 @@
+<a href="/admin/productlist/add"><button>Add New Product</button></a>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Img</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.img}}</td>
+      <td><button type="submit" (click)="removeItem(product.id)" class="btn btn-danger">Xóa</button></td>
+    </tr>
+  </tbody>
+</table>
